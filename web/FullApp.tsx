@@ -32,7 +32,7 @@ const ChildMode=lazy(()=>import('../app/child-mode.web'));
 const PlayWorld=lazy(()=>import('../app/play-world.web'));
 const PlaySoundmine=lazy(()=>import('../app/play-soundmine.web'));
 const Loading=()=> <div className="loading-screen"><ActivityIndicator size="large"/><span>Загружаем SpeechSteps…</span></div>;
-export default function App(){return <BrowserRouter><SafeAreaProvider><Suspense fallback={<Loading/>}><Routes>
+export default function App(){return <BrowserRouter basename={import.meta.env.BASE_URL}><SafeAreaProvider><Suspense fallback={<Loading/>}><Routes>
   <Route path="/" element={<RoleSelect/>}/><Route path="/therapist-login" element={<TherapistLogin/>}/>
   <Route path="/therapist" element={<RoleLayout section="therapist"/>}><Route index element={<Navigate to="clients" replace/>}/><Route path="clients" element={<TherapistClients/>}/><Route path="builder" element={<TherapistBuilder/>}/><Route path="library" element={<TherapistLibrary/>}/><Route path="profile" element={<TherapistProfile/>}/></Route>
   <Route path="/parent" element={<RoleLayout section="parent"/>}><Route index element={<Navigate to="progress" replace/>}/><Route path="progress" element={<ParentProgress/>}/><Route path="tasks" element={<ParentTasks/>}/><Route path="reports" element={<ParentReports/>}/><Route path="profile" element={<ParentProfile/>}/></Route>

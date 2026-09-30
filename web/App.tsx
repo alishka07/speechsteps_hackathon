@@ -10,7 +10,7 @@ const Loading = () => <div className="loading-screen" role="status">Готови
 
 export default function App() {
   if (!IS_HACKATHON_DEMO) return <Suspense fallback={<Loading/>}><FullApp/></Suspense>;
-  return <BrowserRouter><SafeAreaProvider><Suspense fallback={<Loading/>}>
+  return <BrowserRouter basename={import.meta.env.BASE_URL}><SafeAreaProvider><Suspense fallback={<Loading/>}>
     <Routes>
       <Route path="/play-world" element={<PlayWorld/>}/>
       <Route path="/demo/results" element={<DemoResults/>}/>

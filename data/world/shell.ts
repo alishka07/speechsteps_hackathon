@@ -127,7 +127,7 @@ ${cssVars()}
     display:none; align-items:center; gap:10px; max-width:86%;
     background:var(--glass); border-radius:18px; border-left:5px solid var(--lavender);
     padding:10px 16px 10px 11px; box-shadow:var(--shadow); opacity:0; transition:opacity .3s; }
-  #npcAva { width:52px; height:52px; border-radius:50%; background:#EEE7FA url('/world-intro/unchik-portrait.png') center / cover no-repeat; display:flex;
+  #npcAva { width:52px; height:52px; border-radius:50%; background:#EEE7FA url('${import.meta.env.BASE_URL}world-intro/unchik-portrait.png') center / cover no-repeat; display:flex;
     align-items:center; justify-content:center; font-size:0; flex:0 0 auto; animation:bob .58s ease-in-out infinite; }
   @keyframes bob { 0%,100% { transform:translateY(0) rotate(-6deg); } 50% { transform:translateY(-5px) rotate(6deg); } }
   #npcName { font-size:11px; font-weight:900; letter-spacing:.06em; text-transform:uppercase; color:var(--lavender-deep); }
@@ -143,7 +143,7 @@ ${cssVars()}
   /* ---------- полноэкранные слои ---------- */
   .layer { position:fixed; inset:0; z-index:30; display:flex; flex-direction:column;
     align-items:center; justify-content:center; padding:24px 20px; overflow:auto; text-align:center; }
-  #start { gap:15px; color:#fff; background:linear-gradient(90deg, #10263DDD, #182D50A8), url('/world-intro/echo-gateway.png') center/cover; }
+  #start { gap:15px; color:#fff; background:linear-gradient(90deg, #10263DDD, #182D50A8), url('${import.meta.env.BASE_URL}world-intro/echo-gateway.png') center/cover; }
   #startPortrait { width:100px; height:100px; object-fit:contain; }
   #startControls { display:flex; flex-direction:column; gap:10px; width:min(340px, 100%); }
   #startControls .cta { margin:0; width:100%; }
@@ -171,7 +171,7 @@ ${cssVars()}
     isolation:isolate;
     background:
       linear-gradient(90deg, rgba(9,28,67,.16), transparent 28%, transparent 74%, rgba(31,22,87,.1)),
-      url('/world-intro/echo-gateway.png') center center / cover no-repeat,
+      url('${import.meta.env.BASE_URL}world-intro/echo-gateway.png') center center / cover no-repeat,
       #152B59;
   }
   #intro::before {
@@ -466,7 +466,7 @@ ${cssVars()}
   </div>
 
   <div id="start" class="layer">
-    <img id="startPortrait" src="/world-intro/unchik-portrait.png" alt="Үнчик" />
+    <img id="startPortrait" src="${import.meta.env.BASE_URL}world-intro/unchik-portrait.png" alt="Үнчик" />
     <h1>Остров Эха</h1>
     <p class="lead" id="startLead">Веди лисёнка кончиком пальца. Веб-камера станет твоим контроллером, а Үнчик покажет дорогу.</p>
     <div id="startControls"><button id="go" type="button" class="cta">Играть жестами</button><button id="goKeyboard" type="button">Играть с клавиатурой</button></div>
@@ -475,9 +475,9 @@ ${cssVars()}
 
   <div id="intro" class="layer">
     <div id="introLayout">
-      <img id="introSpirit" src="/world-intro/unchik-flying.png" alt="" aria-hidden="true" />
+      <img id="introSpirit" src="${import.meta.env.BASE_URL}world-intro/unchik-flying.png" alt="" aria-hidden="true" />
       <div id="introCard">
-        <img id="introAva" src="/world-intro/unchik-portrait.png" alt="" />
+        <img id="introAva" src="${import.meta.env.BASE_URL}world-intro/unchik-portrait.png" alt="" />
         <div id="introName">Үнчик</div>
         <div id="introText"></div>
         <div id="introWave" aria-hidden="true"></div>

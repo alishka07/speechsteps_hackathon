@@ -3,9 +3,9 @@ import { ArrowLeft, ArrowRight, Camera, Check, Compass, Flower2, Footprints, Mic
 import { useEchoJourney } from './useEchoJourney';
 import './EchoJourney.css';
 
-const ART = '/echo-journey/';
-const COMPANION = '/world-intro/unchik-flying.png';
-const PORTRAIT = '/world-intro/unchik-portrait.png';
+const ART = `${import.meta.env.BASE_URL}echo-journey/`;
+const COMPANION = `${import.meta.env.BASE_URL}world-intro/unchik-flying.png`;
+const PORTRAIT = `${import.meta.env.BASE_URL}world-intro/unchik-portrait.png`;
 const STOPS = [
   { id: 'arrival', label: 'Тихий берег', action: 'Подари звук', icon: Sparkles },
   { id: 'flower', label: 'Сонная поляна', action: 'Разбуди цветок', icon: Flower2 },

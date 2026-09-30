@@ -94,7 +94,7 @@ export default function DemoResults() {
           <p>Здесь видно, что получилось в игре и где можно продолжить.</p>
           <div className="dr-profile"><span>{child?.name?.charAt(0) || 'И'}</span><div><small>Текущий профиль</small><strong>{child?.name || 'Игрок'}</strong></div></div>
         </div>
-        <div className="dr-island" aria-hidden="true"><img src="/echo-journey/shore.png" alt=""/><span>У каждого чуда свой темп.</span></div>
+        <div className="dr-island" aria-hidden="true"><img src={`${import.meta.env.BASE_URL}echo-journey/shore.png`} alt=""/><span>У каждого чуда свой темп.</span></div>
       </section>
 
       <section className="dr-section dr-camera-section" aria-labelledby="dr-camera-title">
