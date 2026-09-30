@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "baseUrl": ".",
+    "paths": { "@/*": ["./*"] },
+    "types": ["vite/client", "node"]
+  },
+  "include": ["app", "components", "data", "theme", "store", "lib", "ai", "i18n", "web", "vite.config.mts"],
+  "exclude": ["node_modules", "echo-island", "__tests__", "vitest.config.ts", "server"]
+}

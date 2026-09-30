@@ -1,0 +1,10 @@
+{
+  "name": "speechsteps-world-sync",
+  "version": "1.0.0",
+  "description": "Минимальный REST-бэкенд синхронизации прогресса 3D-мира «Остров Эха» (без зависимостей).",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  }
+}

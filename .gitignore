@@ -1,0 +1,29 @@
+# dependencies and generated web builds
+node_modules/
+dist/
+.vite/
+web-build/
+
+# local config and environment
+.env
+.env.*
+!.env.example
+.expo/
+.agents/
+.vscode/
+server/world-data.json
+
+# Local asset source packs, previews and the archived prototype
+/Models/
+/Previews/
+/echo-island/
+/Preview*.png
+/Sample.png
+/Overview.html
+/*.url
+/skills-lock.json
+
+# misc
+*.log
+*.tsbuildinfo
+.DS_Store
